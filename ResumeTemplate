@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <p>don't print this to pdf</p>
-        <div id="pdf">
-            <p><font size="3" color="red">print this to pdf</font></p>
-        </div>
+		<h1>Welcome to my resume builder!</h1>
+		<div style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
+			<p>select the coding languages you are proficient in</p>
+			<form action="/action_page.php">
+				<input type="checkbox" id="HTML" name="HTML" value="HTML">
+				<label for="HTML"> HTML</label><br>
+				<input type="checkbox" id="CSS" name="CSS" value="CSS">
+				<label for="CSS"> CSS</label><br>
+				<input type="checkbox" id="Python" name="Python" value="Python">
+				<label for="Python"> Python</label><br><br>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		<br>
+		<div style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
+			<p>select the coding languages you have used before (but aren't very proficient in)</p>
+			<form action="/action_page.php">
+				<input type="checkbox" id="HTML" name="HTML" value="HTML">
+				<label for="HTML"> HTML</label><br>
+				<input type="checkbox" id="CSS" name="CSS" value="CSS">
+				<label for="CSS"> CSS</label><br>
+				<input type="checkbox" id="Python" name="Python" value="Python">
+				<label for="Python"> Python</label><br><br>
+				<input type="submit" value="Submit">
+			</form>	
+		</div>
     </body>
 </html>
