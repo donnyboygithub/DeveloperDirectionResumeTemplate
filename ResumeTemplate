@@ -1,1 +1,9 @@
-<!--this is the first line of the resume template-->
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>don't print this to pdf</p>
+        <div id="pdf">
+            <p><font size="3" color="red">print this to pdf</font></p>
+        </div>
+    </body>
+</html>
