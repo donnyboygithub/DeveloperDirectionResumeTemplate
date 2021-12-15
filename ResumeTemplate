@@ -12,6 +12,19 @@
 		</div>
 		<br>
 		<div style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
+			<p>type the links to your social media pages (if applicable)</p>
+			<form action="/action_page.php">
+				<label for="name">github:</label>
+				<input type="text" id="github" name="github"><br><br>
+				<label for="name">instagram:</label>
+				<input type="text" id="instagram" name="instagram"><br><br>
+				<label for="name">twitter:</label>
+				<input type="text" id="twitter" name="twitter"><br><br>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		<br>
+		<div style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
 			<p>select the coding languages you are proficient in</p>
 			<form action="/action_page.php">
 				<input type="checkbox" id="HTML" name="HTML" value="HTML">
