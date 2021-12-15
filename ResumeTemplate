@@ -3,6 +3,15 @@
     <body>
 		<h1>Welcome to my resume builder!</h1>
 		<div style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
+			<p>type the name you want displayed on your resume</p>
+			<form action="/action_page.php">
+				<label for="name">name:</label>
+				<input type="text" id="name" name="name"><br><br>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		<br>
+		<div style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
 			<p>select the coding languages you are proficient in</p>
 			<form action="/action_page.php">
 				<input type="checkbox" id="HTML" name="HTML" value="HTML">
