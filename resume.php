@@ -52,6 +52,7 @@ $skills = isset($_POST['skills']) ? $_POST['skills'] : '';
     <div>
         <p><?php echo $company1; ?></p>
         <p><?php echo $job1; ?></p>
+        <p><?php echo $start1, ' - ', $end1; ?></p>
         <p><?php echo $desc1; ?></p>
         <p><?php echo $desc2; ?></p>
         <p><?php echo $desc3; ?></p>
