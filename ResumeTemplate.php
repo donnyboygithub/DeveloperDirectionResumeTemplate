@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<title>Resume Template</title>
 </head>
 
@@ -13,37 +14,53 @@
 	<h3>Instructions: Please fill out your relevant information below:</h3>
 	<form action="resume.php" method="POST">
 		<p>Basic Information</p>
-		<div>
-			<label for="first">First Name</label>
-			<input type="text" id="first" name="first" placeholder="First Name" required>
-			<label for="last">Last Name</label>
-			<input type="text" id="last" name="last" placeholder="Last Name" required>
+		<div class="form-group row">
+			<label for="first" class="col-sm-2 col-form-label">First Name</label>
+			<div class="col-sm-10">
+				<input type="text" id="first" name="first" placeholder="First Name" required>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="last" class="col-sm-2 col-form-label">Last Name</label>
+			<div class="col-sm-10">
+				<input type="text" id="last" name="last" placeholder="Last Name" required>
+			</div>
 		</div>
 
-		<div>
-			<label for="title">Job Title</label>
-			<input type="text" name="title" id="title" placeholder="Developer" required>
+		<div class="form-group row">
+			<label for="title" class="col-sm-2 col-form-label">Job Title</label>
+			<div class="col-sm-10">
+				<input type="text" name="title" id="title" placeholder="Developer" required>
+			</div>
 		</div>
-		<div>
-			<div>
-				<label for="phone">Phone:</label>
+		<div class="form-group row">
+			<label for="phone" class="col-sm-2 col-form-label">Phone:</label>
+			<div class="col-sm-10">
 				<input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" maxlength="12">
 			</div>
-			<div>
-				<label for="email">Email</label>
+		</div>
+		<div class="form-group row">
+			<label for="email" class="col-sm-2 col-form-label">Email</label>
+			<div class="col-sm-10">
 				<input type="email" name="email" id="email" placeholder="you@site.com">
 			</div>
-			<div>
-				<label for="github">GitHub</label>
-				<input type="text" id="github" placeholder="github.com/you">
+		</div>
+		<div class="form-group row">
+			<label for="github" class="col-sm-2 col-form-label">GitHub</label>
+			<div class="col-sm-10">
+				<input type="text" name="github" id="github" placeholder="github.com/you">
 			</div>
-			<div>
-				<label for="linkedin">LinkedIn</label>
-				<input type="text" id="linkedin" placeholder="linkedin.com/you">
+		</div>
+		<div class="form-group row">
+			<label for="linkedin" class="col-sm-2 col-form-label">LinkedIn</label>
+			<div class="col-sm-10">
+				<input type="text" name="linkedin" id="linkedin" placeholder="linkedin.com/you">
 			</div>
-			<div>
-				<label for="education">Education</label>
-				<input type="text" id="education" placeholder="Stanford">
+		</div>
+		<div class="form-group row">
+			<label for="education" class="col-sm-2 col-form-label">Education</label>
+			<div class="col-sm-10">
+				<input type="text" name="education" id="education" placeholder="Stanford">
 			</div>
 		</div>
 
@@ -83,7 +100,7 @@
 		</div>
 
 		<p>Skills</p>
-		<div>
+		<fieldset class="form-group">
 			<div>
 				<input type="checkbox" id="html" name="skills[]" value="HTML">
 				<label for="html">HTML</label>
@@ -100,7 +117,7 @@
 				<input type="checkbox" id="js" name="skills[]" value="JavaScript">
 				<label for="js">JavaScript</label>
 			</div>
-		</div>
+		</fieldset>
 		<button>Submit</button>
 	</form>
 </body>

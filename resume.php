@@ -26,50 +26,107 @@ $skills = isset($_POST['skills']) ? $_POST['skills'] : '';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <title>Resume</title>
 </head>
 
 <body>
-    <div>
-        <p><?php echo $first, ' ', $last; ?></p>
-        <p><?php echo $title; ?></p>
-    </div>
+    <div class="container">
+        <div class="row">
+            <h3><strong><?php echo $first, ' ', $last; ?></strong></h3>
+        </div>
+        <div class="row">
+            <p><?php echo $title; ?></p>
+        </div>
 
-    <p>Detail</p>
-    <div>
-        <p><?php echo $phone; ?></p>
-        <p><?php echo $email; ?></p>
-        <p><?php echo $github; ?></p>
-        <p><?php echo $linkedin; ?></p>
-    </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="row">
+                    <h4><strong><i class="bi bi-person-fill"></i> Professional Summary</strong></h4>
+                </div>
+                <div class="row">
+                    <p><?php echo $summary; ?></p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <strong>Detail</strong>
+                </div>
+                <div class="row">
+                    <p><i class="bi bi-telephone-fill"></i> <?php echo $phone; ?></p>
+                </div>
+                <div class="row">
+                    <p><i class="bi bi-envelope-fill"></i> <?php echo $email; ?></p>
+                </div>
+                <div class="row">
+                    <p><i class="bi bi-github"></i> <?php echo $github; ?></p>
+                </div>
+                <div class="row">
+                    <p><i class="bi bi-linkedin"></i> <?php echo $linkedin; ?></p>
+                </div>
+            </div>
+        </div>
 
-    <p>Professional Summary</p>
-    <div>
-        <p><?php echo $summary; ?></p>
-    </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="row">
+                    <h5><strong><i class="bi bi-briefcase-fill"></i> Employment History</strong></h5>
+                </div>
+                <div class="row">
+                    <p><?php echo $company1; ?></p>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-4">
+                        <p><?php echo $job1; ?></p>
+                    </div>
+                    <div class="col-4">
+                        <p><?php echo $start1, ' - ', $end1; ?></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li><?php echo $desc1; ?></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li><?php echo $desc2; ?></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li><?php echo $desc3; ?></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <strong>Skills</strong>
+                </div>
+                <div>
+                    <ul>
+                        <?php if (!empty($_POST['skills'])) { ?>
+                            <?php foreach ($_POST['skills'] as $value) { ?>
+                                <li><?php echo $value; ?></li>
+                            <?php } ?>
+                        <?php } ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-    <p>Employment History</p>
-    <div>
-        <p><?php echo $company1; ?></p>
-        <p><?php echo $job1; ?></p>
-        <p><?php echo $start1, ' - ', $end1; ?></p>
-        <p><?php echo $desc1; ?></p>
-        <p><?php echo $desc2; ?></p>
-        <p><?php echo $desc3; ?></p>
-    </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="row">
+                    <h5><strong><i class="bi bi-mortarboard-fill"></i> Education</strong></h5>
+                </div>
+                <div>
+                    <p><?php echo $education; ?></p>
+                </div>
+            </div>
+        </div>
 
-    <p>Education</p>
-    <div>
-        <p><?php echo $education; ?></p>
-    </div>
-
-    <p>Skills</p>
-    <div>
-        <ul>
-            <?php foreach ($_POST['skills'] as $value) { ?>
-                <li><?php echo $value; ?></li>
-            <?php } ?>
-        </ul>
     </div>
 </body>
 
